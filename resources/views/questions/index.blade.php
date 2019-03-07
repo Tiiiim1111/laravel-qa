@@ -17,8 +17,8 @@
 
 
                 <div class="card-body">
-
-                    @foreach ($questions as $question)
+                    @include ('layouts._messages')
+                     @foreach ($questions as $question)
                     <div class="media">
                         <div class="media-body">
                             <h3 class="mt-0"> <a href="{{ $question->url }}"> {{ $question->title }} </a> </h3>
@@ -31,7 +31,7 @@
                         </div>
                     </div>
                     <hr>
-                    @endforeach
+                     @endforeach
                     <div class="mx-auto">
                     {{$questions->links() }}
                     </div>
